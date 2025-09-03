@@ -2,7 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
-
+import logoNome from '../images/logoNome.jpg'
   // const [count, setCount] = useState(0)
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <div className='interface'>
           <div className='logo'>
             <a href='#'>
-              <img src="./logoNome.jpg" className='img-logoMurilo' alt="Logo Murilo Augusto" />
+              <img src={logoNome} className='img-logoMurilo' alt="Logo Murilo Augusto" />
             </a>
           </div>
           <nav className='menu-desktop'>
