@@ -215,7 +215,6 @@ h2.titulo span{
 section.contatos{
   display: flex;
   align-items: center;
-  /* padding-top: 50px; */
 }
 section.contatos .interface a{
   width: 64px;

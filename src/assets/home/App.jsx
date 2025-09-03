@@ -1,9 +1,16 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
 import logoNome from '../images/logoNome.jpg'
-  // const [count, setCount] = useState(0)
+import foto_Pessoal from '../images/Foto_Pessoal_1.jpg'
+import iconHTML from '../images/iconhtml.png'
+import iconCSS from '../images/iconcss.png'
+import iconJavaScript from '../images/iconjs.png'
+import iconReact from '../images/iconreact.png'
+import iconNode from '../images/iconnode.png'
+import iconPython from '../images/iconpython.png'
+import iconEmail from '../images/iconEmail.png'
+import iconLinkedin from '../images/iconlinkedin.png'
+import iconGitHub from '../images/icongithub.png'
+
 
 function App() {
 
@@ -52,7 +59,7 @@ function App() {
                 </div>
               </div>
               <div className="img-topo-site">
-                <img className='minhaFoto' src='./Foto_Pessoal_1.jpg' alt='FotoPessoal'></img>
+                <img className='minhaFoto' src={foto_Pessoal} alt='FotoPessoal'></img>
               </div>
             </div>
           </div>
@@ -64,7 +71,7 @@ function App() {
             <div className="flex">
               <div className='conhecimentos-box-html'>
                 <a href='https://www.w3schools.com/html'> 
-                  <img class="icone-conhecimentos" src='./iconhtml.png'></img>
+                  <img class="icone-conhecimentos" src={iconHTML}></img>
                 </a>
                   <h3>HTML</h3>
                   <p>Linguagem de marcação usada para estruturar páginas da web 
@@ -74,7 +81,7 @@ function App() {
               </div>
               <div className='conhecimentos-box-css'>
                 <a href='https://www.w3schools.com/css'> 
-                  <img class="icone-conhecimentos" src='./iconcss.png'></img>
+                  <img class="icone-conhecimentos" src={iconCSS}></img>
                 </a>
                 <h3>CSS</h3>
                 <p>Usado para estilizar o HTML (cores, fontes, tamanhos, 
@@ -84,7 +91,7 @@ function App() {
               </div>
               <div className='conhecimentos-box-javascript'>
                 <a href='https://www.w3schools.com/js'> 
-                  <img class="icone-conhecimentos" src='./iconjs.png'></img>
+                  <img class="icone-conhecimentos" src={iconJavaScript}></img>
                 </a>
                   <h3>JAVASCRIPT</h3>
                   <p>Linguagem de programação que dá interatividade ao site (menus dinâmicos,
@@ -94,7 +101,7 @@ function App() {
               </div>
               <div className='conhecimentos-box-react'>
                 <a href='https://react.dev'> 
-                <img class="icone-conhecimentos" src='./iconreact.png'></img>
+                <img class="icone-conhecimentos" src={iconReact}></img>
                 </a>
                 <h3>REACT</h3>
                 <p>Biblioteca JavaScript focada no frontend para criar interfaces modernas, 
@@ -102,7 +109,7 @@ function App() {
               </div>
               <div className='conhecimentos-box-node'>
                 <a href='https://nodejs.org/pt'> 
-                  <img class="icone-conhecimentos"src='./iconnode.png'></img>
+                  <img class="icone-conhecimentos"src={iconNode}></img>
                 </a>
                   <h3>NODE.JS</h3>
                   <p>Ambiente que permite rodar JavaScript no servidor (backend). Serve para criar APIs, 
@@ -111,7 +118,7 @@ function App() {
               </div>
               <div className='conhecimentos-box-python'>
                 <a href='https://www.python.org'> 
-                <img class="icone-conhecimentos" src='./iconpython.png'></img>
+                <img class="icone-conhecimentos" src={iconPython}></img>
                 </a>
                 <h3>PYTHON</h3>
                 <p>Linguagem de programação versátil, usada em várias áreas: backend, ciência de dados, 
@@ -124,13 +131,13 @@ function App() {
         <section className="contatos">
           <div className="interface">
             <a href="https://outlook.live.com/mail/0/deeplink/compose?to=muriloact@hotmail.com&subject=Dúvida&body=Olá, gostaria de mais informações." className="Email">
-              <img src="./iconEmail.png" alt="" className="iconeEmail"/>
+              <img src={iconEmail} alt="" className="iconeEmail"/>
             </a>
             <a href="" className="linkedin">
-              <img src="./iconlinkedin.png" alt="" className="iconeLinkedin"/>
+              <img src={iconLinkedin} alt="" className="iconeLinkedin"/>
             </a>
             <a href="" className="github">
-              <img src="./icongithub.png" alt="" className="iconeGitHub"/>
+              <img src={iconGitHub} alt="" className="iconeGitHub"/>
             </a>
           </div>
         </section>
@@ -141,79 +148,3 @@ function App() {
 }
 
 export default App
-
-/* <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" >
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>  
-  */
-    //#region primeira tentativa
-
-      /* <header>
-            <div className='barComNome'>
-              <h2 className=''>Murilo Augusto Campanha Teixeira</h2>
-              <div className='linkdLinkedin'>
-                <a className='Logo_Linkedin' href='https://www.linkedin.com/in/murilo-augusto-campanha-teixeira-403845268'>
-                  <img className='LogoLinkedin' src='./linkedin.png'></img>
-                </a>
-                <a href='https://wa.me/+5565999358060'>
-                  <img className='WhatsApp' src='./whatsapp.png'></img>
-                </a>
-              </div>
-            </div>
-        </header>
-        
-        <div className='dApresentacao'>
-          <h2> Sobre Mim</h2>
-          <div className='dSobreMim'>
-            <img className='Foto_Perfil' src='./FotoPessoal.jpeg' >
-            </img>
-            <p>
-              Olá, Sou o Murilo Augusto, Desenvolvedor fullstack <br />
-              Sou formado na área de Analise e Desenvolvimento de Sistemas
-            </p>
-          </div>
-        </div>
-
-        <div className='dConhecimentoContainer'>
-          <h2> Conhecimentos</h2>
-          <div className='dConhecimentos'>
-            <div className='Container_Back'>
-              <h3>Linguagens BackEnd</h3>
-              <div className='dListaBackEnd'>
-                <ul className='listaBackEnd'>
-                  <li>Node.JS</li>
-                  <li>C#</li>
-                  <li>Python</li>
-                </ul>
-              </div>
-            </div>
-            <div className='Container_Front'>
-              <h3>Linguagens BackEnd</h3>
-              <div className='dlistaFrontEnd'>
-                <ul className='listaFrontEnd'>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>REACT</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div> */
-    //#endregion
