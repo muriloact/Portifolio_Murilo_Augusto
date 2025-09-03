@@ -1,6 +1,6 @@
 {
   "name": "portifolio",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://muriloact.github.io/Portifolio_Murilo_Augusto",
