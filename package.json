@@ -3,7 +3,7 @@
   "private": false,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://muriloact.github.io/portfolio",
+  "homepage": "https://muriloact.github.io/Portifolio-de-Trabalho/",
 
   "scripts": {
     "dev": "vite",
