@@ -27,8 +27,8 @@ function App() {
             <ul>
               <li><a href='#'>Início</a></li>
               <li><a href='#'>Especialidades</a></li>
-              <li><a href='#'>Sobre</a></li>
               <li><a href='#'>Projetos</a></li>
+              <li><a href='#'>Contato</a></li>
             </ul>
           </nav>
           <div className='btn-contato'>
@@ -44,12 +44,12 @@ function App() {
             <div className="flex">
               <div className="txt-topo-site">
                 <h1>
-                  <span>Murilo Augusto, </span>
-                  desenvolvedor focado em soluções empresariais,<br/>
-                  enxerga desafios como oportunidades de criar inovaçÕES
+                  <span>Sou Murilo Augusto, </span>
+                  desenvolvedor focado em soluções empresariais,
+                  enxerga desafios como oportunidades de criar inovações
                 </h1>
-                <p>Acredito que a programação é uma ferramenta de mudança: <br/>
-                  cada linha de código pode facilitar a vida de alguém. Gosto de trabalhar em equipe,<br/>
+                <p>Acredito que a programação é uma ferramenta de mudança:
+                  cada linha de código pode facilitar a vida de alguém. Gosto de trabalhar em equipe,
                   compartilhando conhecimento e aprendendo com diferentes perspectivas.
                 </p>
                 <div className='btn-contato'>
@@ -64,84 +64,123 @@ function App() {
             </div>
           </div>
         </section>
-
         <section className='conhecimentos'>
           <div className="interface">
             <h2 className='titulo'>MEUS <span>CONHECIMENTOS</span></h2>
             <div className="flex">
               <div className='conhecimentos-box-html'>
-                <a href='https://www.w3schools.com/html'> 
+                <a href='https://www.w3schools.com/html'>
                   <img class="icone-conhecimentos" src={iconHTML}></img>
                 </a>
-                  <h3>HTML</h3>
-                  <p>Linguagem de marcação usada para estruturar páginas da web 
-                    (títulos, textos, imagens, links, formulários, etc). 
-                    É o “esqueleto” do site.
-                  </p>
+                <h3>HTML</h3>
+                <p>Linguagem de marcação usada para estruturar páginas da web
+                  (títulos, textos, imagens, links, formulários, etc).
+                  É o “esqueleto” do site.
+                </p>
               </div>
               <div className='conhecimentos-box-css'>
-                <a href='https://www.w3schools.com/css'> 
+                <a href='https://www.w3schools.com/css'>
                   <img class="icone-conhecimentos" src={iconCSS}></img>
                 </a>
                 <h3>CSS</h3>
-                <p>Usado para estilizar o HTML (cores, fontes, tamanhos, 
-                  espaçamentos, layout responsivo, animações). 
+                <p>Usado para estilizar o HTML (cores, fontes, tamanhos,
+                  espaçamentos, layout responsivo, animações).
                   É o “visual/roupa” do site.
                 </p>
               </div>
               <div className='conhecimentos-box-javascript'>
-                <a href='https://www.w3schools.com/js'> 
+                <a href='https://www.w3schools.com/js'>
                   <img class="icone-conhecimentos" src={iconJavaScript}></img>
                 </a>
-                  <h3>JAVASCRIPT</h3>
-                  <p>Linguagem de programação que dá interatividade ao site (menus dinâmicos,
-                    validação de formulários, sliders, jogos, integrações com APIs). 
-                    É o “cérebro” do site.
-                  </p>
+                <h3>JAVASCRIPT</h3>
+                <p>Linguagem de programação que dá interatividade ao site (menus dinâmicos,
+                  validação de formulários, sliders, jogos, integrações com APIs).
+                  É o “cérebro” do site.
+                </p>
               </div>
               <div className='conhecimentos-box-react'>
-                <a href='https://react.dev'> 
-                <img class="icone-conhecimentos" src={iconReact}></img>
+                <a href='https://react.dev'>
+                  <img class="icone-conhecimentos" src={iconReact}></img>
                 </a>
                 <h3>REACT</h3>
-                <p>Biblioteca JavaScript focada no frontend para criar interfaces modernas, 
+                <p>Biblioteca JavaScript focada no frontend para criar interfaces modernas,
                   rápidas e reutilizáveis através de componentes</p>
               </div>
               <div className='conhecimentos-box-node'>
-                <a href='https://nodejs.org/pt'> 
-                  <img class="icone-conhecimentos"src={iconNode}></img>
+                <a href='https://nodejs.org/pt'>
+                  <img class="icone-conhecimentos" src={iconNode}></img>
                 </a>
-                  <h3>NODE.JS</h3>
-                  <p>Ambiente que permite rodar JavaScript no servidor (backend). Serve para criar APIs, 
-                    sistemas web completos, automações e até apps em tempo real.
-                  </p>
+                <h3>NODE.JS</h3>
+                <p>Ambiente que permite rodar JavaScript no servidor (backend). Serve para criar APIs,
+                  sistemas web completos, automações e até apps em tempo real.
+                </p>
               </div>
               <div className='conhecimentos-box-python'>
-                <a href='https://www.python.org'> 
-                <img class="icone-conhecimentos" src={iconPython}></img>
+                <a href='https://www.python.org'>
+                  <img class="icone-conhecimentos" src={iconPython}></img>
                 </a>
                 <h3>PYTHON</h3>
-                <p>Linguagem de programação versátil, usada em várias áreas: backend, ciência de dados, 
+                <p>Linguagem de programação versátil, usada em várias áreas: backend, ciência de dados,
                   inteligência artificial, automação, análise de dados e até aplicações desktop.</p>
               </div>
             </div>
           </div>
         </section>
-
-        <section className="contatos">
+        <section className="projetos">
           <div className="interface">
-            <a href="https://outlook.live.com/mail/0/deeplink/compose?to=muriloact@hotmail.com&subject=Dúvida&body=Olá, gostaria de mais informações." className="Email">
-              <img src={iconEmail} alt="Outlook" className="iconeEmail"/>
-            </a>
-            <a href="https://www.linkedin.com/in/murilo-augusto-campanha-teixeira-403845268" className="linkedin">
-              <img src={iconLinkedin} alt="Linkedin" className="iconeLinkedin"/>
-            </a>
-            <a href="https://github.com/muriloact" className="github" >
-              <img src={iconGitHub} alt="GitHub" className="iconeGitHub"/>
-            </a>
+            <h2 className="titulo">MEUS <span>PROJETOS</span></h2>
+            <div className="flex">
+              <div className="img-port">
+
+              </div>
+              <div className="img-port">
+
+              </div>
+              <div className="img-port">
+
+              </div>
+            </div>
           </div>
         </section>
+        <section className="formulario-conato">
+          <div className="interface">
+            <h2 className="titulo">FALA<span> COMIGO</span></h2>
+            <div className="flex"></div>
+            <form action="">
+              <input type="text" name="" id="" className="name" placeholder='Seu nome completo:' required />
+              <input type="text" name="" id="" className="email" placeholder='Seu E-mail:' required />
+              <input type="text" name="" id="" className="telefone" placeholder='Seu número:' />
+              <textarea name="" id="" placeholder='Assunto... ' required></textarea>
+              <div className="btn-enviar"><input type="submit" value="ENVIAR" /></div>
+            </form>
+          </div>
+        </section>
+        <section className="contatos">
+
+        </section>
       </main>
+      <footer>
+        <div className="interface">
+          <div className="line-footer sup">
+            <div className="flex">
+              <div className="line-footer">
+                <img src={logoNome} alt="" />
+              </div>
+              <div className="btn-social">
+                <a href="https://outlook.live.com/mail/0/deeplink/compose?to=muriloact@hotmail.com&subject=Dúvida&body=Olá, gostaria de mais informações." className="Email">
+                  <img src={iconEmail} alt="Outlook" className="iconeEmail" />
+                </a>
+                <a href="https://www.linkedin.com/in/murilo-augusto-campanha-teixeira-403845268" className="linkedin">
+                  <img src={iconLinkedin} alt="Linkedin" className="iconeLinkedin" />
+                </a>
+                <a href="https://github.com/muriloact" className="github" >
+                  <img src={iconGitHub} alt="GitHub" className="iconeGitHub" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
     </>
   )

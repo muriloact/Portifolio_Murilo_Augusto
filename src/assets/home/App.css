@@ -1,13 +1,16 @@
+/*GLOBAL STYLE*/
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --espacamento: 60px 4%;
 }
 #root{
   background-color: #0e1216;
   height: auto;
   font-family: "TASA Orbiter", sans-serif;
 }
+/*NAV BAR SITE*/
 .interface{
   max-width: 1200px;
   margin: 0 auto;
@@ -25,7 +28,7 @@
   cursor: pointer;
   color: #fff;
 }
-.btn-contato button:hover{
+button:hover{
   padding: 10px 40px;
   font-size: 18px;
   font-weight: 700;
@@ -43,7 +46,7 @@
   object-fit: cover;
 }
 header{
-  padding: 30px 4%;
+  padding: var(--espacamento);
 }
 .logo{
   width: 150px;
@@ -76,7 +79,7 @@ header nav ul li{
 header .btn-contato button:hover{
   box-shadow: 0px 0px 8px #b9bec3;
 }
-/*ESTILO DO TOPO DO SITE*/
+/*SECTION ESTILO DO TOPO DO SITE*/
 .minhaFoto{
   width: 250px;
   height: 300px;
@@ -84,7 +87,7 @@ header .btn-contato button:hover{
   object-fit: cover;
 }
 section.top-do-site{
-  padding: 40px 4%;
+  padding: var(--espacamento);
 }
 section.topo-do-site .flex{
   align-items: center;
@@ -114,14 +117,14 @@ section.topo-do-site .flex{
 }
 /*CONHECIMENTOS*/
 section.conhecimentos{
-  padding: 40px ;
+  padding: var(--espacamento);
   display: flex;
 }
 section.conhecimentos .flex{
   text-align: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
 }
 h2.titulo{
   color: #696f75;
@@ -140,9 +143,8 @@ h2.titulo span{
 .conhecimentos-box-python,
 .conhecimentos-box-react
 {
-  width: 500px;
+  width: 290px;
   color: #fff;
-  text-align: center;
   border: 2px solid;
   border-radius: 25px;
   margin-top: 25px;
@@ -160,6 +162,7 @@ h2.titulo span{
 .conhecimentos-box-node p,
 .conhecimentos-box-python p,
 .conhecimentos-box-react p{
+  font-size: 18px;
   text-align: justify;
   padding:5px 15px;
 }
@@ -208,24 +211,91 @@ h2.titulo span{
 .conhecimentos-box-node h3,
 .conhecimentos-box-python h3,
 .conhecimentos-box-react h3{
-  font-size: 20px;
+  font-size: 18px;
   margin: 15px 0;
 }
-
-section.contatos{
-  display: flex;
-  align-items: center;
+/*SECTION PROJETOS*/
+section.projetos{
+  padding: var(--espacamento);
+  box-shadow: 0 0 20px 5px #696f75;
 }
-section.contatos .interface a{
+section.projetos .flex{
+  justify-content: space-around;
+
+}
+.img-port{
+  width: 360px;
+  height: 400px;
+}
+/*SECTION FORMULARIO DE CONTATO*/
+section.formulario-conato{
+  padding: var(--espacamento);
+}
+form{
+  max-width: 500px;
+  margin: 0 auto;
+  padding: var(--espacamento);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid #20cf54aa;
+  border-radius: 25px;
+  margin-top: 10px;
+}
+form input, form textarea{
+  width: 100%;
+  background-color: #30363d;
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: #fff;
+}
+form textarea{
+  resize: none;
+  min-height: 150px;
+}
+form .btn-enviar{
+  margin-top: 10px;
+  text-align: center;
+}
+form .btn-enviar input{
+  width: 120px;
+  background-color: #696f75;
+  cursor: pointer;
+  font-weight: 700;
+}
+form .btn-enviar input:hover{
+  transform: scale(1.05);
+  transition: .3s;
+  cursor: pointer;
+  color: #20cf54aa;
+  filter: drop-shadow(0 0 3px #20cf54aa);
+}
+
+/*RODAPE*/
+footer{
+  padding: 20px;
+}
+footer .flex{
+  justify-content: space-between;
+}
+.sup{
+  border-top: 2px solid green;
+}
+footer .line-footer a{
   width: 64px;
   padding: 15px;
 }
-section.contatos .interface img{
-  width: 78px;
-  
-
+footer .line-footer a img{
+  width: 64px;
+  object-fit: cover;
 }
-
+footer .interface img{
+  width: 100px;
+  object-fit: cover;
+}
 @keyframes flutuar{
   0%{
     top: 0;
