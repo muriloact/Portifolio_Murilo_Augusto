@@ -131,13 +131,13 @@ function App() {
         <section className="contatos">
           <div className="interface">
             <a href="https://outlook.live.com/mail/0/deeplink/compose?to=muriloact@hotmail.com&subject=Dúvida&body=Olá, gostaria de mais informações." className="Email">
-              <img src={iconEmail} alt="" className="iconeEmail"/>
+              <img src={iconEmail} alt="Outlook" className="iconeEmail"/>
             </a>
-            <a href="" className="linkedin">
-              <img src={iconLinkedin} alt="" className="iconeLinkedin"/>
+            <a href="https://www.linkedin.com/in/murilo-augusto-campanha-teixeira-403845268" className="linkedin">
+              <img src={iconLinkedin} alt="Linkedin" className="iconeLinkedin"/>
             </a>
-            <a href="" className="github">
-              <img src={iconGitHub} alt="" className="iconeGitHub"/>
+            <a href="https://github.com/muriloact" className="github" >
+              <img src={iconGitHub} alt="GitHub" className="iconeGitHub"/>
             </a>
           </div>
         </section>

@@ -140,7 +140,7 @@ h2.titulo span{
 .conhecimentos-box-python,
 .conhecimentos-box-react
 {
-  width: 350px;
+  width: 500px;
   color: #fff;
   text-align: center;
   border: 2px solid;
@@ -160,7 +160,7 @@ h2.titulo span{
 .conhecimentos-box-node p,
 .conhecimentos-box-python p,
 .conhecimentos-box-react p{
-  text-align: start;
+  text-align: justify;
   padding:5px 15px;
 }
 .conhecimentos .conhecimentos-box-html:hover{
