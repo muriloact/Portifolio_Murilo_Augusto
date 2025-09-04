@@ -94,6 +94,7 @@ section.topo-do-site .flex{
   justify-content: center;
   gap: 60px;
   margin-top: 5%;
+  margin: 0;
 }
 .topo-do-site .txt-topo-site h1{
   color: #bdb9b9;
@@ -305,6 +306,23 @@ footer .interface img{
   }
 }
 
+@media screen and (max-width:1138px){
+  .menu-desktop, .btn-contato{
+    display: none;
+  }
+  .flex{
+    flex-direction: column;
+  }
+  .topo-do-site .flex{
+    flex-direction: column-reverse;
+  }
+    .topo-do-site .flex .txt-topo-site {
+    width: 80vh;
+  }
+  .line-footer .flex{
+    flex-direction: row;
+  }
+}
 
 /* #root {
   margin-bottom: 100px;
