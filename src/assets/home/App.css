@@ -306,18 +306,26 @@ footer .interface img{
   }
 }
 
-@media screen and (max-width:1138px){
+@media screen and (max-width:420px){
+  #root{
+    width: 390px;
+  }
   .menu-desktop, .btn-contato{
     display: none;
   }
   .flex{
     flex-direction: column;
   }
+  .interface .logo{
+    width: 390px;
+    display: flex;
+    justify-content: center;
+  }
   .topo-do-site .flex{
     flex-direction: column-reverse;
   }
     .topo-do-site .flex .txt-topo-site {
-    width: 80vh;
+    width: 35vh;
   }
   .line-footer .flex{
     flex-direction: row;
