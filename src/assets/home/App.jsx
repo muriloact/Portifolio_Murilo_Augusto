@@ -10,9 +10,44 @@ import iconPython from '../images/iconpython.png'
 import iconEmail from '../images/iconEmail.png'
 import iconLinkedin from '../images/iconlinkedin.png'
 import iconGitHub from '../images/icongithub.png'
+import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 
 function App() {
+
+  const[name, setName] = useState('')
+  const[email, setEmail] = useState('')
+  const[telefone, setTelefone] = useState('')
+  const[assunto, setAssunto] = useState('')
+
+  function sendEmail(e){
+    e.preventDefault();
+
+    if(name === '' || email == '' || assunto ===''){
+      alert("Preencha todos os campos");
+      return;
+    }
+
+    const templateParms ={
+      from_name:name,
+      email: email,
+      telefone:telefone,
+      assunto: assunto,
+    }
+
+    emailjs.send("service_diwf81n",
+    "template_6imdjmb", templateParms, "9L50XJ067vkoxvCA1").then((response)=>{
+      console.log("EMAIL ENVIADO", response.status, response.text)
+      setName('')
+      setEmail('')
+      setTelefone('')
+      setAssunto('')
+    },(err)=>{
+      console.log('ERRO', err)
+    })
+  
+  }
 
   return (
     <>
@@ -71,7 +106,7 @@ function App() {
             <div className="flex">
               <div className='conhecimentos-box-html'>
                 <a href='https://www.w3schools.com/html'>
-                  <img class="icone-conhecimentos" src={iconHTML}></img>
+                  <img className="icone-conhecimentos" src={iconHTML}></img>
                 </a>
                 <h3>HTML</h3>
                 <p>Linguagem de marcação usada para estruturar páginas da web
@@ -81,7 +116,7 @@ function App() {
               </div>
               <div className='conhecimentos-box-css'>
                 <a href='https://www.w3schools.com/css'>
-                  <img class="icone-conhecimentos" src={iconCSS}></img>
+                  <img className="icone-conhecimentos" src={iconCSS}></img>
                 </a>
                 <h3>CSS</h3>
                 <p>Usado para estilizar o HTML (cores, fontes, tamanhos,
@@ -91,7 +126,7 @@ function App() {
               </div>
               <div className='conhecimentos-box-javascript'>
                 <a href='https://www.w3schools.com/js'>
-                  <img class="icone-conhecimentos" src={iconJavaScript}></img>
+                  <img className="icone-conhecimentos" src={iconJavaScript}></img>
                 </a>
                 <h3>JAVASCRIPT</h3>
                 <p>Linguagem de programação que dá interatividade ao site (menus dinâmicos,
@@ -101,7 +136,7 @@ function App() {
               </div>
               <div className='conhecimentos-box-react'>
                 <a href='https://react.dev'>
-                  <img class="icone-conhecimentos" src={iconReact}></img>
+                  <img className="icone-conhecimentos" src={iconReact}></img>
                 </a>
                 <h3>REACT</h3>
                 <p>Biblioteca JavaScript focada no frontend para criar interfaces modernas,
@@ -109,7 +144,7 @@ function App() {
               </div>
               <div className='conhecimentos-box-node'>
                 <a href='https://nodejs.org/pt'>
-                  <img class="icone-conhecimentos" src={iconNode}></img>
+                  <img className="icone-conhecimentos" src={iconNode}></img>
                 </a>
                 <h3>NODE.JS</h3>
                 <p>Ambiente que permite rodar JavaScript no servidor (backend). Serve para criar APIs,
@@ -118,7 +153,7 @@ function App() {
               </div>
               <div className='conhecimentos-box-python'>
                 <a href='https://www.python.org'>
-                  <img class="icone-conhecimentos" src={iconPython}></img>
+                  <img className="icone-conhecimentos" src={iconPython}></img>
                 </a>
                 <h3>PYTHON</h3>
                 <p>Linguagem de programação versátil, usada em várias áreas: backend, ciência de dados,
@@ -143,16 +178,16 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="formulario-conato">
+        <section className="formulario-conato" >
           <div className="interface">
             <h2 className="titulo">FALE<span> COMIGO</span></h2>
             <div className="flex"></div>
-            <form action="">
-              <input type="text" name="" id="" className="name" placeholder='Seu nome completo:' required />
-              <input type="text" name="" id="" className="email" placeholder='Seu E-mail:' required />
-              <input type="text" name="" id="" className="telefone" placeholder='Seu número:' />
-              <textarea name="" id="" placeholder='Assunto... ' required></textarea>
-              <div className="btn-enviar"><input type="submit" value="ENVIAR" /></div>
+            <form className='form' onSubmit={sendEmail}>
+              <input type="text" className="name" placeholder='Seu nome completo:' onChange={(e) => setName(e.target.value)} value={name} required />
+              <input type="text" className="email" placeholder='Seu E-mail:' onChange={(e) => setEmail(e.target.value)} value={email} required />
+              <input type="text" name="" id="" className="telefone" placeholder='Seu número:' onChange={(e) => setTelefone(e.target.value)} value={telefone}/>
+              <textarea name="" id="" placeholder='Assunto... ' className='assunto' onChange={(e) => setAssunto(e.target.value)} value={assunto} required></textarea>
+              <div className="btn-enviar"><input type="submit" value="ENVIAR" onSubmit={sendEmail} /></div>
             </form>
           </div>
         </section>

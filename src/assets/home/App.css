@@ -18,6 +18,11 @@
   margin: 0 auto;
 }
 
+header .interface {
+  display: flex;
+  justify-content: space-between;
+}
+
 .flex {
   display: flex;
 }
@@ -33,15 +38,11 @@
 }
 
 button:hover {
-  padding: 10px 40px;
   font-weight: 600;
   background-color: #696f75;
-  border-radius: 30px;
-  border: 0;
   transform: scale(1);
   transition: .3s;
   cursor: pointer;
-  color: #fff;
 }
 
 .img-logoMurilo {
@@ -52,6 +53,7 @@ button:hover {
 
 header {
   padding: var(--espacamento);
+  border-bottom: 1px solid green;
 }
 
 .logo {
@@ -94,30 +96,32 @@ header .btn-contato button:hover {
 
 /*SECTION ESTILO DO TOPO DO SITE*/
 .topo-do-site .interface .titulo {
+  padding: 20px;
   color: #fff;
 }
 
 .minhaFoto {
-  width: 250px;
-  height: 300px;
-  border-radius: 50%;
+  width: 320px;
+  height: 450px;
+  border-radius: 48%;
+  padding-bottom: 20px;
   object-fit: cover;
 }
 
-section.top-do-site {
-  padding: 40px 20%;
+section .top-do-site {
+  width: 70%;
 }
 
 section.topo-do-site .flex {
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+  justify-content: space-around;
+  padding: 20px 10%;
   margin-top: 5%;
   margin: 0;
 }
 
 .topo-do-site .txt-topo-site h1 {
+  width: 60%;
   color: #bdb9b9;
   font-size: 28px;
   line-height: 40px;
@@ -125,10 +129,11 @@ section.topo-do-site .flex {
 
 .topo-do-site .txt-topo-site span {
   color: #fff;
-  font-size: 34px;
+  font-size: 32px;
 }
 
 .topo-do-site .txt-topo-site p {
+  width: 50%;
   color: #fff;
   margin: 30px 0;
 
@@ -143,15 +148,15 @@ section.topo-do-site .flex {
 
 /*CONHECIMENTOS*/
 section.conhecimentos {
-  padding: var(--espacamento);
-  display: flex;
+  align-items: center;
+  padding-bottom: 6%;
 }
 
 section.conhecimentos .flex {
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
 }
 
 h2.titulo {
@@ -171,12 +176,13 @@ h2.titulo span {
 .conhecimentos-box-node,
 .conhecimentos-box-python,
 .conhecimentos-box-react {
-  width: 290px;
+  align-items: center;
+  width: 240px;
   color: #fff;
   border: 2px solid;
   border-radius: 25px;
   margin-top: 25px;
-  padding: 20px 5px;
+  padding: 20px 15px;
 
 }
 
