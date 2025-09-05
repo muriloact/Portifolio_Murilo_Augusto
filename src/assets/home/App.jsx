@@ -41,6 +41,7 @@ function App() {
       <main>
         <section className='topo-do-site'>
           <div className='interface'>
+              <h2 className="titulo">Sobre</h2>
             <div className="flex">
               <div className="txt-topo-site">
                 <h1>
@@ -131,20 +132,20 @@ function App() {
             <h2 className="titulo">MEUS <span>PROJETOS</span></h2>
             <div className="flex">
               <div className="img-port">
-
+                <img src={iconNode} alt="" />
               </div>
               <div className="img-port">
-
+                <img src={iconNode} alt="" />
               </div>
               <div className="img-port">
-
+                <img src={iconNode} alt="" />
               </div>
             </div>
           </div>
         </section>
         <section className="formulario-conato">
           <div className="interface">
-            <h2 className="titulo">FALA<span> COMIGO</span></h2>
+            <h2 className="titulo">FALE<span> COMIGO</span></h2>
             <div className="flex"></div>
             <form action="">
               <input type="text" name="" id="" className="name" placeholder='Seu nome completo:' required />
@@ -154,9 +155,6 @@ function App() {
               <div className="btn-enviar"><input type="submit" value="ENVIAR" /></div>
             </form>
           </div>
-        </section>
-        <section className="contatos">
-
         </section>
       </main>
       <footer>
