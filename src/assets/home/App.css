@@ -12,8 +12,8 @@
   font-family: "TASA Orbiter", sans-serif;
 }
 
-/*NAV BAR SITE*/
-.interface {
+  /*NAV BAR SITE*/
+  .interface {
   max-width: 1800px;
   margin: 0 auto;
 }
@@ -101,15 +101,14 @@ header .btn-contato button:hover {
 }
 
 .minhaFoto {
-  width: 320px;
-  height: 450px;
-  border-radius: 48%;
-  padding-bottom: 20px;
+  width: 250px;
+  height: 300px;
+  border-radius: 50%;
   object-fit: cover;
 }
 
 section .top-do-site {
-  width: 70%;
+  padding: 40px 20%;
 }
 
 section.topo-do-site .flex {
@@ -156,7 +155,7 @@ section.conhecimentos .flex {
   text-align: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px;
 }
 
 h2.titulo {
@@ -360,6 +359,7 @@ footer .interface img {
   width: 100px;
   object-fit: cover;
 }
+  
 
 @keyframes flutuar {
   0% {
@@ -397,7 +397,7 @@ footer .interface img {
   /*conecimentos*/
 
   section.conhecimentos .flex {
-    padding: 30px 8%;
+    padding: 30px 12%;
   }
 
   .conhecimentos .conhecimentos-box-html,
@@ -408,9 +408,6 @@ footer .interface img {
   .conhecimentos-box-react {
     width: 270px;
   }
-
-
-
 
 }
 
@@ -436,6 +433,9 @@ footer .interface img {
   .topo-do-site .txt-topo-site {
     width: 680px;
   }
+   .topo-do-site .txt-topo-site h1{
+    width: 100%;
+   }
 
   .topo-do-site .txt-topo-site p {
     width: 100%;
@@ -504,6 +504,7 @@ footer .interface img {
   }
 
   .topo-do-site .txt-topo-site h1 {
+    width: 80%;
     font-size: 21px;
   }
 
@@ -587,6 +588,11 @@ footer .interface img {
   }
 
   /*CONHECIMENTOS*/
+  section.conhecimentos .flex {
+    justify-content: center;
+    text-align: center;
+    gap: 0;
+  }
 
   .conhecimentos .conhecimentos-box-html,
   .conhecimentos-box-css,
@@ -638,11 +644,13 @@ footer .interface img {
   }
 
   .topo-do-site .txt-topo-site span {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .topo-do-site .txt-topo-site h1 {
-    font-size: 20px;
+    width: 80%;
+    font-size: 18px;
+    line-height: 20px;
   }
 
   .topo-do-site .txt-topo-site p {
@@ -663,7 +671,7 @@ footer .interface img {
   .conhecimentos-box-node,
   .conhecimentos-box-python,
   .conhecimentos-box-react {
-    width: 280px;
+    width: 320px;
   }
 
   /*MEUS PROJETOS*/
@@ -675,7 +683,7 @@ footer .interface img {
 
   .img-port {
     margin: 5%;
-    width: 360px;
+    width: 60%;
     height: 400px;
   }
 
