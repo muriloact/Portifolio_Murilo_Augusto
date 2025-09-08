@@ -72,7 +72,7 @@ function App() {
             </ul>
           </nav>
           <div className='btn-contato'>
-            <a href='#'>
+            <a href='https://wa.me/5565999358060?text=Gostaria%20de%20saber%20mais%20sobre%20o%20os%20trabalhos'>
               <button>Contato</button>
             </a>
           </div>
@@ -112,7 +112,7 @@ function App() {
                   compartilhando conhecimento e aprendendo com diferentes perspectivas.
                 </p>
                 <div className='btn-contato'>
-                  <a href='#'>
+                  <a href='https://wa.me/5565999358060?text=Gostaria%20de%20saber%20mais%20sobre%20o%20os%20trabalhos'>
                     <button>Entre em Contato</button>
                   </a>
                 </div>

@@ -340,6 +340,7 @@ h2.titulo span {
 
 /*SECTION PROJETOS*/
 section.projetos {
+  display: none;
   padding: var(--espacamento);
   box-shadow: 0 0 20px 5px #696f75;
 }
