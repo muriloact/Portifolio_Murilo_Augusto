@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   --espacamento: 60px 4%;
+  scroll-behavior: smooth;
 }
 
 #root {
@@ -12,8 +13,8 @@
   font-family: "TASA Orbiter", sans-serif;
 }
 
-  /*NAV BAR SITE*/
-  .interface {
+/*NAV BAR SITE*/
+.interface {
   max-width: 1800px;
   margin: 0 auto;
 }
@@ -82,10 +83,10 @@ header a:hover {
 }
 
 header nav ul {
-  list-style: none;
+  list-style-type: none;
 }
 
-header nav ul li {
+header nav.menu-desktop ul li {
   display: inline-block;
   padding: 0 50px;
 }
@@ -93,6 +94,88 @@ header nav ul li {
 header .btn-contato button:hover {
   box-shadow: 0px 0px 8px #b9bec3;
 }
+
+/*ESTILO MENU MOBILE*/
+
+.btn-abrir-menu{
+  display: none;
+}
+.menu-mobile{
+  display: none;
+}
+.overlay-menu{
+  display: none;
+}
+
+/* 
+.btn-abrir-menu img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+}
+
+.btn-abrir-menu img:hover {
+  cursor: pointer;
+}
+
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  /* escondido 
+  width: 250px;
+  height: 100vh;
+  background: #111;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-mobile.ativo {
+  right: 0;
+  /* aparece 
+}
+
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #696f754d;
+  z-index: 500;
+}
+
+.menu-mobile nav ul {
+  text-align: right;
+}
+
+.menu-mobile nav ul li a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 20px 4%;
+  display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+  background-color: #253647;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.menu-mobile .btn-fechar {
+  padding: 20px 8%;
+}
+
+.menu-mobile .btn-fechar img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.menu-mobile .btn-fechar img:hover {
+  cursor: pointer;
+} */
 
 /*SECTION ESTILO DO TOPO DO SITE*/
 .topo-do-site .interface .titulo {
@@ -359,7 +442,7 @@ footer .interface img {
   width: 100px;
   object-fit: cover;
 }
-  
+
 
 @keyframes flutuar {
   0% {
@@ -424,6 +507,87 @@ footer .interface img {
     justify-content: center;
   }
 
+  /*ESTILO MENU MOBILE*/
+
+  .btn-abrir-menu{
+  display: block;
+}
+.menu-mobile{
+  display: block;
+}
+.overlay-menu{
+  display: block;
+}
+
+  .btn-abrir-menu img {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+  }
+
+  .btn-abrir-menu img:hover {
+    cursor: pointer;
+  }
+
+  .menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    /* escondido */
+    width: 250px;
+    height: 100vh;
+    background: #111;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .menu-mobile.ativo {
+    right: 0;
+    /* aparece */
+  }
+
+  .overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #696f754d;
+    z-index: 500;
+  }
+
+  .menu-mobile nav ul {
+    text-align: right;
+  }
+
+  .menu-mobile nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 4%;
+    display: block;
+  }
+
+  .menu-mobile nav ul li a:hover {
+    background-color: #253647;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  .menu-mobile .btn-fechar {
+    padding: 20px 8%;
+  }
+
+  .menu-mobile .btn-fechar img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+
+  .menu-mobile .btn-fechar img:hover {
+    cursor: pointer;
+  }
+
   /*TOPO DO SITE*/
 
   .topo-do-site .flex {
@@ -433,9 +597,10 @@ footer .interface img {
   .topo-do-site .txt-topo-site {
     width: 680px;
   }
-   .topo-do-site .txt-topo-site h1{
+
+  .topo-do-site .txt-topo-site h1 {
     width: 100%;
-   }
+  }
 
   .topo-do-site .txt-topo-site p {
     width: 100%;
@@ -487,6 +652,77 @@ footer .interface img {
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+
+  /*ESTILO MENU MOBILE*/
+
+  .btn-abrir-menu img {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+  }
+
+  .btn-abrir-menu img:hover {
+    cursor: pointer;
+  }
+
+  .menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    /* escondido */
+    width: 250px;
+    height: 100vh;
+    background: #111;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .menu-mobile.ativo {
+    right: 0;
+    /* aparece */
+  }
+
+  .overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #696f754d;
+    z-index: 500;
+  }
+
+  .menu-mobile nav ul {
+    text-align: right;
+  }
+
+  .menu-mobile nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 4%;
+    display: block;
+  }
+
+  .menu-mobile nav ul li a:hover {
+    background-color: #253647;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  .menu-mobile .btn-fechar {
+    padding: 20px 8%;
+  }
+
+  .menu-mobile .btn-fechar img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+
+  .menu-mobile .btn-fechar img:hover {
+    cursor: pointer;
   }
 
   /*TOPO DO SITE*/
@@ -557,6 +793,77 @@ footer .interface img {
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+
+  /*ESTILO MENU MOBILE*/
+
+  .btn-abrir-menu img {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+  }
+
+  .btn-abrir-menu img:hover {
+    cursor: pointer;
+  }
+
+  .menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    /* escondido */
+    width: 250px;
+    height: 100vh;
+    background: #111;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .menu-mobile.ativo {
+    right: 0;
+    /* aparece */
+  }
+
+  .overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #696f754d;
+    z-index: 500;
+  }
+
+  .menu-mobile nav ul {
+    text-align: right;
+  }
+
+  .menu-mobile nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 4%;
+    display: block;
+  }
+
+  .menu-mobile nav ul li a:hover {
+    background-color: #253647;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  .menu-mobile .btn-fechar {
+    padding: 20px 8%;
+  }
+
+  .menu-mobile .btn-fechar img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+
+  .menu-mobile .btn-fechar img:hover {
+    cursor: pointer;
   }
 
   /*TOPO DO SITE*/

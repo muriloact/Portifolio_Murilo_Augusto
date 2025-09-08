@@ -10,44 +10,49 @@ import iconPython from '../../../public/iconpython.png'
 import iconEmail from '../../../public/iconEmail.png'
 import iconLinkedin from '../../../public/iconlinkedin.png'
 import iconGitHub from '../../../public/icongithub.png'
+import iconBtnFechar from '../../../public/x-button.png'
+import iconList from '../../../public/list-view.png'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 
 
 function App() {
 
-  const[name, setName] = useState('')
-  const[email, setEmail] = useState('')
-  const[telefone, setTelefone] = useState('')
-  const[assunto, setAssunto] = useState('')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [telefone, setTelefone] = useState('')
+  const [assunto, setAssunto] = useState('')
+  const [menuOpen,setMenuOpen] = useState(false);
 
-  function sendEmail(e){
+  function sendEmail(e) {
     e.preventDefault();
 
-    if(name === '' || email == '' || assunto ===''){
+    if (name === '' || email == '' || assunto === '') {
       alert("Preencha todos os campos");
       return;
     }
 
-    const templateParms ={
-      from_name:name,
+    const templateParms = {
+      from_name: name,
       email: email,
-      telefone:telefone,
+      telefone: telefone,
       assunto: assunto,
     }
 
     emailjs.send("service_diwf81n",
-    "template_6imdjmb", templateParms, "9L50XJ067vkoxvCA1").then((response)=>{
-      console.log("EMAIL ENVIADO", response.status, response.text)
-      setName('')
-      setEmail('')
-      setTelefone('')
-      setAssunto('')
-    },(err)=>{
-      console.log('ERRO', err)
-    })
-  
+      "template_6imdjmb", templateParms, "9L50XJ067vkoxvCA1").then((response) => {
+        console.log("EMAIL ENVIADO", response.status, response.text)
+        setName('')
+        setEmail('')
+        setTelefone('')
+        setAssunto('')
+      }, (err) => {
+        console.log('ERRO', err)
+      })
+
   }
+
+
 
   return (
     <>
@@ -60,10 +65,10 @@ function App() {
           </div>
           <nav className='menu-desktop'>
             <ul>
-              <li><a href='#'>Início</a></li>
-              <li><a href='#'>Especialidades</a></li>
-              <li><a href='#'>Projetos</a></li>
-              <li><a href='#'>Contato</a></li>
+              <li><a href='#inicio'>Início</a></li>
+              <li><a href='#conhecimento'>Especialidades</a></li>
+              <li><a href='#projeto'>Projetos</a></li>
+              <li><a href='#contato'>Contato</a></li>
             </ul>
           </nav>
           <div className='btn-contato'>
@@ -71,12 +76,30 @@ function App() {
               <button>Contato</button>
             </a>
           </div>
+          <div className="btn-abrir-menu" onClick={() => setMenuOpen(true)}>
+            <img src={iconList}/>
+          </div>
+
+          <div className={`menu-mobile ${menuOpen ? "ativo" : ''}`}>
+            <div className="btn-fechar" onClick={() => setMenuOpen(false)}>
+              <img src={iconBtnFechar}/>
+            </div>
+            <nav >
+              <ul>
+                <li><a href='#inicio' onClick={() => setMenuOpen(false)}>Início</a></li>
+                <li><a href='#conhecimento' onClick={() => setMenuOpen(false)}>Especialidades</a></li>
+                <li><a href='#projeto' onClick={() => setMenuOpen(false)}>Projetos</a></li>
+                <li><a href='#contato' onClick={() => setMenuOpen(false)}>Contato</a></li>
+              </ul>
+            </nav>
+          </div>
+          {menuOpen && <div className="overlay-menu" onClick={() => setMenuOpen(false)}></div>}
         </div>
       </header>
       <main>
-        <section className='topo-do-site'>
+        <section className='topo-do-site' id='inicio'>
           <div className='interface'>
-              <h2 className="titulo">Sobre</h2>
+            <h2 className="titulo">Sobre</h2>
             <div className="flex">
               <div className="txt-topo-site">
                 <h1>
@@ -100,7 +123,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className='conhecimentos'>
+        <section className='conhecimentos' id='conhecimento'>
           <div className="interface">
             <h2 className='titulo'>MEUS <span>CONHECIMENTOS</span></h2>
             <div className="flex">
@@ -162,7 +185,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="projetos">
+        <section className="projetos" id='projeto'>
           <div className="interface">
             <h2 className="titulo">MEUS <span>PROJETOS</span></h2>
             <div className="flex">
@@ -178,14 +201,14 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="formulario-conato" >
+        <section className="formulario-conato" id='contato'>
           <div className="interface">
             <h2 className="titulo">FALE<span> COMIGO</span></h2>
             <div className="flex"></div>
             <form className='form' onSubmit={sendEmail}>
               <input type="text" className="name" placeholder='Seu nome completo:' onChange={(e) => setName(e.target.value)} value={name} required />
               <input type="text" className="email" placeholder='Seu E-mail:' onChange={(e) => setEmail(e.target.value)} value={email} required />
-              <input type="text" name="" id="" className="telefone" placeholder='Seu número:' onChange={(e) => setTelefone(e.target.value)} value={telefone}/>
+              <input type="text" name="" id="" className="telefone" placeholder='Seu número:' onChange={(e) => setTelefone(e.target.value)} value={telefone} />
               <textarea name="" id="" placeholder='Assunto... ' className='assunto' onChange={(e) => setAssunto(e.target.value)} value={assunto} required></textarea>
               <div className="btn-enviar"><input type="submit" value="ENVIAR" onSubmit={sendEmail} /></div>
             </form>
